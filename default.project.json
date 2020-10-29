@@ -7,7 +7,7 @@
       "$className": "ReplicatedStorage",
 
       "Knit": {
-        "$path": "src/Framework/Knit/src/Knit"
+        "$path": "src/Framework/Knit"
       },
       "Game": {
         "$className": "Folder",
