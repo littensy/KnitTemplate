@@ -1,0 +1,43 @@
+{
+  "name": "TEMPLATE",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+
+      "Knit": {
+        "$path": "src/Framework/Knit/src/Knit"
+      },
+      "Game": {
+        "$className": "Folder",
+        
+        "Shared": {
+          "$path": "src/Game/Shared"
+        }
+      }
+    },
+
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+
+      "Game": {
+        "$className": "Folder",
+        "$path": "src/Game/Server"
+      }
+    },
+
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+
+        "Game": {
+          "$className": "Folder",
+          "$path": "src/Game/Client"
+        }
+      }
+    }
+  }
+}
