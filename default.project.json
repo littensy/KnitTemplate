@@ -5,16 +5,11 @@
 
     "ReplicatedStorage": {
       "$className": "ReplicatedStorage",
+      "$ignoreUnknownInstances": true,
 
       "Knit": {
-        "$path": "src/Framework/Knit"
-      },
-      "Game": {
-        "$className": "Folder",
-        
-        "Shared": {
-          "$path": "src/Game/Shared"
-        }
+        "$ignoreUnknownInstances": true,
+        "$path": "src/Framework/Knit/src"
       }
     },
 
