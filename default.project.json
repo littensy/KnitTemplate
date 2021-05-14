@@ -9,7 +9,7 @@
 
       "Knit": {
         "$ignoreUnknownInstances": true,
-        "$path": "src/Framework/Knit/src/Knit"
+        "$path": "src/Framework/Knit/src"
       },
       
       "Game": {
