@@ -9,7 +9,15 @@
 
       "Knit": {
         "$ignoreUnknownInstances": true,
-        "$path": "src/Framework/Knit/src"
+        "$path": "src/Framework/Knit/src/Knit"
+      },
+      
+      "Game": {
+        "$className": "Folder",
+        
+        "Shared": {
+          "$path": "src/Game/Shared"
+        }
       }
     },
 
