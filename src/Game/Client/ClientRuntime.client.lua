@@ -1,4 +1,5 @@
 local Knit = require(game:GetService("ReplicatedStorage").Knit)
+local Component = require(Knit.Util.Component)
 
 -- Expose module folders:
 Knit.Shared = game:GetService("ReplicatedStorage").Game.Shared
@@ -13,3 +14,6 @@ for _,obj in ipairs(script.Parent.Controllers:GetDescendants()) do
 end
 
 Knit.Start()
+
+-- Load Components:
+Component.Auto(Knit.Components)
