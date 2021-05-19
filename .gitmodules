@@ -1,0 +1,6 @@
+[submodule "lib/Knit"]
+	path = lib/Knit
+	url = https://github.com/Sleitnick/Knit
+[submodule "lib/ReplicaService"]
+	path = lib/ReplicaService
+	url = https://github.com/MadStudioRoblox/ReplicaService/
