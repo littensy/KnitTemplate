@@ -13,7 +13,7 @@
 	countdown:WaitPromise(): Promise<CountdownState>
 
 	countdown.Clock:Connect(secondsLeft: number)
-	countdown.Clock:Connect(state: CountdownState)
+	countdown.Completed:Connect(state: CountdownState)
 
 ]]
 
