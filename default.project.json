@@ -1,38 +1,41 @@
 {
-  "name": "TEMPLATE",
+  "name": "Roblox",
   "tree": {
     "$className": "DataModel",
-
     "ReplicatedStorage": {
       "$className": "ReplicatedStorage",
-
-      "Knit": {
-        "$path": "src/Framework/Knit"
-      },
       "Game": {
         "$className": "Folder",
-        
         "Shared": {
+          "$className": "Folder",
           "$path": "src/Game/Shared"
         }
+      },
+      "Knit": {
+        "$path": "lib/Knit/src"
+      },
+      "Assets": {
+        "$ignoreUnknownInstances": true,
+        "$path": "lib/Assets"
+      },
+      "Replica": {
+        "$path": "lib/ReplicaService/src/ReplicatedStorage"
       }
     },
-
     "ServerScriptService": {
       "$className": "ServerScriptService",
-
       "Game": {
         "$className": "Folder",
         "$path": "src/Game/Server"
+      },
+      "Replica": {
+        "$path": "lib/ReplicaService/src/ServerScriptService"
       }
     },
-
     "StarterPlayer": {
       "$className": "StarterPlayer",
-
       "StarterPlayerScripts": {
         "$className": "StarterPlayerScripts",
-
         "Game": {
           "$className": "Folder",
           "$path": "src/Game/Client"

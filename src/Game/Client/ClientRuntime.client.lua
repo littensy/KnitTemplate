@@ -1,15 +1,31 @@
-local Knit = require(game:GetService("ReplicatedStorage").Knit)
+-- ClientRuntime
+-- littensy
+-- February 06, 2021
 
--- Expose module folders:
-Knit.Shared = game:GetService("ReplicatedStorage").Game.Shared
+
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Load core module:
+local Knit: Knit = require(ReplicatedStorage.Knit)
+local Component = require(Knit.Util.Component)
+
+-- Load ReplicaController:
+Knit.ReplicaController = require(ReplicatedStorage:WaitForChild("Replica"):WaitForChild("ReplicaController"))
+
+-- Populate Knit:
+Knit.Assets = ReplicatedStorage:WaitForChild("Assets")
+Knit.Shared = ReplicatedStorage.Game.Shared
 Knit.Components = script.Parent.Components
 Knit.Modules = script.Parent.Modules
 
--- Load all controllers:
-for _,obj in ipairs(script.Parent.Controllers:GetDescendants()) do
-    if (obj:IsA("ModuleScript")) then
-        require(obj)
-    end
-end
+-- Add controllers & components:
+Knit.AddControllersDeep(script.Parent.Controllers)
+Component.Auto(script.Parent.Components)
 
-Knit.Start()
+-- Start Knit:
+Knit.Start():Then(function()
+    Knit.ReplicaController.RequestData()
+end):Catch(function(err)
+    warn("Knit framework failure: " .. tostring(err))
+end)
